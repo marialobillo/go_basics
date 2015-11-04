@@ -9,7 +9,7 @@ type Salutation struct {
 
 func main() {
 
-	var s = Salutation{"Maria", "Hello!"}
+	var s = Salutation{name: "Maria", greeting: "Hello!"}
 
 	fmt.Println(s.name)
 	fmt.Println(s.greeting)
