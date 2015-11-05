@@ -5,7 +5,7 @@ import "fmt"
 func GetPrefix(name string) (prefix string){
   switch name {
     case "Bob": prefix = "Mr "
-    case "Joe": prefix = "Dr"
+    case "Joe", "Amy": prefix = "Dr"
     case "Mary": prefix = "Mrs"
     default: prefix = "Dude "
 
