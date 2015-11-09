@@ -22,6 +22,8 @@ func main(){
      }
 
      slice = slice[0:2]
+     slice = slice[1:]
+     slice = slice[0:len(slice)]
 
      fmt.Println(slice)
 }
