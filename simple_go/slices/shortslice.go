@@ -25,5 +25,7 @@ func main(){
      slice = slice[1:]
      slice = slice[0:len(slice)]
 
+     slice = append(slice, Salutation{"Harry", "Hi!"})
+
      fmt.Println(slice)
 }
