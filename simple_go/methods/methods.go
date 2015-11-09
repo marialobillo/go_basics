@@ -3,28 +3,34 @@ package main
 import "fmt"
 
 
-type Salutation struc {
+type Salutation struct {
      Name string
      Greeting string
 }
 
-type Salutations []Salutation
+func (salutation Salutation) Rename(newName string) {
+     salutation.Name = newName
+}
 
 
-func (salutations Salutations)Greet(salutation Salutations, times int){
+
+func (salutations Salutation)Greet(salutation Salutation, times int){
      for _, s := range salutations {
-     	 
+     	 fmt.Println(salutations.Name)
      }
 }
 
 func main(){
 
-     salutations := Salutation{
+     salutations := []Salutation{
      	   {"Bob", "Hello"},
 	   {"Joe", "Hi"},
 	   {"Mary", "What is up?"},
      }
 
-     salutations.Greet()
+     salutations.Greet(salutations, 2)
+
+     salutations[0].Rename("Sherlock")
+     
      
 }
